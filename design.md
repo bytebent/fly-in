@@ -40,8 +40,12 @@ as you like.
 - **Length** is a parameter. The default is the length of the audio. A different length
   **squeezes or stretches** the audio (and so the director's pacing) to fit. [Decided]
 - Images in a slideshow are spread evenly across the length by default. [Decided]
-- Option: **transients in the audio trigger the next image** instead. [Decided] How strong a
-  transient has to be, and what happens if there are more or fewer transients than images. [Open]
+- Option: **transients in the audio trigger the next image** instead. [Decided]
+  - A **Sensitivity** knob sets how strong a transient has to be to count. [Decided] Default 0.5
+    on a 0–1 scale, where 1 counts the faintest transients. [Proposed]
+  - **More transients than images**: the slideshow circles back to the first image. [Decided]
+  - **Fewer transients than images**: fewer images are shown. [Decided]
+  - A minimum time between image changes (default 0.5 s), so a dense passage doesn't flicker. [Proposed]
 
 ## 4. Director
 
@@ -120,7 +124,6 @@ and are mostly missing.
 
 ## 10. Open questions
 
-- Transient-triggered slideshow: threshold, and more or fewer transients than images (§3).
 - Audio → scene mapping (§4).
 - Still image → timeline (§4).
 - Draft vs full settings (§5).
