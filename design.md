@@ -39,7 +39,9 @@ as you like.
 - Either way the input is **frames + a soundtrack**. A video is re-read as a series of images. [Decided]
 - **Length** is a parameter. The default is the length of the audio. A different length
   **squeezes or stretches** the audio (and so the director's pacing) to fit. [Decided]
-- Images in a slideshow are spread across the length. [Proposed]
+- Images in a slideshow are spread evenly across the length by default. [Decided]
+- Option: **transients in the audio trigger the next image** instead. [Decided] How strong a
+  transient has to be, and what happens if there are more or fewer transients than images. [Open]
 
 ## 4. Director
 
@@ -83,7 +85,7 @@ and are mostly missing.
 - **No coarse brain**: neurons are not merged into cell types; every neuron is computed. [Decided]
 - **Draft and full quality** modes. [Decided] What each one sets (time step, connection cut…). [Open]
 - The brain's output neurons show what the fly is **trying to do** (escape, feed, groom, walk) and
-  can be logged as events. [Proposed]
+  are logged as events. [Decided]
 - Vision is the riskiest part: the simple spiking model handles fast motion poorly and parts of the
   eye's first layer are incomplete in the data. It may need a simplified visual front end. [Open]
 - Runtime on a laptop for a full-length piece. [Open]
@@ -93,7 +95,8 @@ and are mostly missing.
 ## 6. Recording
 
 - **Every spike, per neuron, with timestamps.** [Decided]
-- Plus the script, so later stages know what was happening to the fly. [Proposed]
+- Plus the script, so later stages know what was happening to the fly. [Decided]
+- Plus the behaviour events (§5). [Decided]
 - File format. [Open]
 
 ## 7. Orchestra
@@ -108,7 +111,8 @@ and are mostly missing.
 
 - A rough map of the brain: **regions and their intensity**, not every connection. [Decided]
 - **Boxes and text** showing what is happening to the fly. [Decided]
-- Also what the fly tried to do, and the frame the fly saw, small in a corner. [Proposed]
+- **What the fly tried to do** (the behaviour events). [Decided]
+- **The frame the fly saw**, small in a corner. [Decided]
 
 ## 9. Data and credit
 
@@ -116,6 +120,7 @@ and are mostly missing.
 
 ## 10. Open questions
 
+- Transient-triggered slideshow: threshold, and more or fewer transients than images (§3).
 - Audio → scene mapping (§4).
 - Still image → timeline (§4).
 - Draft vs full settings (§5).
