@@ -42,10 +42,10 @@ as you like.
 - Images in a slideshow are spread evenly across the length by default. [Decided]
 - Option: **transients in the audio trigger the next image** instead. [Decided]
   - A **Sensitivity** knob sets how strong a transient has to be to count. [Decided] Default 0.5
-    on a 0–1 scale, where 1 counts the faintest transients. [Proposed]
+    on a 0–1 scale, where 1 counts the faintest transients. [Decided]
   - **More transients than images**: the slideshow circles back to the first image. [Decided]
   - **Fewer transients than images**: fewer images are shown. [Decided]
-  - A minimum time between image changes (default 0.5 s), so a dense passage doesn't flicker. [Proposed]
+  - A minimum time between image changes: the shortest change the fly can still experience (around its flicker-fusion limit; exact value to be checked). [Decided]
 
 ## 4. Director
 
